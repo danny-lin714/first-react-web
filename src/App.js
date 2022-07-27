@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Bar from './components/bar';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
       <Router>
-        <Bar/>
+        <Navbar/>
         <Routes>
           <Route PATH="/" exact/>
         </Routes>
