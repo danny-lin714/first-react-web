@@ -1,11 +1,28 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { Button } from './Button';
 import './Section.css';
 import '../App.css'
 function Section() {
+    const images=[
+        "images/img-1.jpg",
+        "images/img-2.jpg",
+        "images/img-3.jpg",
+        "images/img-4.jpg",
+    ]
+
+    const [count,setCount]=useState(0);
+
+    useEffect(()=>{
+        let id=setInterval(()=>{
+            setCount(count=>count+1)
+        },3000)
+        return ()=>clearInterval(id)
+    },[])
+
+
   return (
     <div className='hero-container'>
-        <video src='videos/video-2.mp4' autoPlay loop muted/>
+        <img src={images[(count%4)]} alt='alter'/>
         <h1>ADVENTURE AWAITS</h1>
         <p>What are you waiting for?</p>
         <div className="hero-btns">
