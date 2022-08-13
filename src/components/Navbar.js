@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import {Button} from './Button';
+import {Button} from './button';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar({setLang,lang}) {
   const [click,setClick] = useState(false);
   const [button,setButton]=useState(true)
 
@@ -30,13 +30,13 @@ function Navbar() {
     <nav className='navbar'>
         <div className='navbar-container'>
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}> 
-                Whouse <i className='fab fa-typo3'/>
+                {lang?"Whouse":"木創意"} <i className='fab fa-typo3'/>
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' :'fas fa-bars'}/>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-              <li className='nav-item'>
+              <li className='nav-item'>   
                 <Link to="/services" className='nav-links' onClick={closeMobileMenu}>
                   Services
                 </Link>
@@ -51,10 +51,8 @@ function Navbar() {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link to="/sign-up" className='nav-links-mobile' onClick={closeMobileMenu}>
-                  Sign-up
-                </Link>
+              <li className='nav-item nav-links' onClick={event => setLang()}>
+                Translation
               </li>
             </ul>
             {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
