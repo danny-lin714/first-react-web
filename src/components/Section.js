@@ -40,8 +40,13 @@ function Section({lang}) {
             >
                 WATCH TAILER<i className='far fa-play-circle'/>
             </Button>
+            
 
         </div>
+        <button class="button scroll-indicator">
+            <span class="scroll-indicator__label">Baixe para ver mais</span> 
+            <div class="scroll-indicator__line"></div>
+        </button>
       
     </div>
   );
