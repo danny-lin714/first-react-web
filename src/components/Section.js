@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import { Button } from './button';
 import './Section.css';
 import '../App.css'
-function Section({lang}) {
+function Section({lang,event}) {
     const images=[
         "images/img-1.jpg",
         "images/img-2.jpg",
@@ -43,7 +43,7 @@ function Section({lang}) {
             
 
         </div>
-        <button class="button scroll-indicator">
+        <button class="button scroll-indicator" onClick={event}>
             <span class="scroll-indicator__label">Baixe para ver mais</span> 
             <div class="scroll-indicator__line"></div>
         </button>

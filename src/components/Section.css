@@ -69,7 +69,7 @@ img{
 
 .scroll-indicator__line{
     width: 2px;
-    height: 7rem;
+    height: 5vh;
     background-color: #fff;
     transform-origin: center center;
     opacity: .5;
