@@ -16,8 +16,8 @@ function Home({lang}){
 
     return(
         <>
-            <Section lang={lang}/>
-            <Introduction/>
+            <Section lang={lang} event={scrollview}/>
+            <div ref={ref}><Introduction/></div>
             <Footer lang={lang}/>
         </>
     )
