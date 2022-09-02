@@ -18,9 +18,9 @@
         word-break: break-all ;
     }
     .intro-content-body{
-        font-size: 40px;
+        font-size: 25px;
         color:black;
-        width: 50%;
+        width: 70%;
         font-family: 'Shadows Into Light', cursive;
         margin:3rem;
         word-break: break-all ;
@@ -31,7 +31,7 @@
         font-size:85px;
       }
       .intro-content-body{
-        font-size: 38px;
+        font-size: 20px;
       }
       
     }
@@ -40,7 +40,7 @@
         font-size:70px;
       }
       .intro-content-body{
-        font-size: 30px;
+        font-size: 15px;
       }
       
     }
