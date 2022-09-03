@@ -23,19 +23,19 @@ function Cards() {
                     />
                   </ul>
                 <ul className='cards__items'>
-                    <CardItem
-                      src="images/20220806_160001.png"
-                      text='Explore the hidden waterfall deep inside the Amazon Jungle'
-                      label='Adventure'
-                      path='/services'
-                    />
-                    <CardItem
-                      src="images/20220806_160711.png"
-                      text='Explore the hidden waterfall deep inside the Amazon Jungle'
-                      label='Adventure'
-                      path='/services'
-                    />
-                    <CardItem
+                  <CardItem
+                    src="images/20220806_160001.png"
+                    text='Explore the hidden waterfall deep inside the Amazon Jungle'
+                    label='Adventure'
+                    path='/services'
+                  />
+                  <CardItem
+                    src="images/20220806_160711.png"
+                    text='Explore the hidden waterfall deep inside the Amazon Jungle'
+                    label='Adventure'
+                    path='/services'
+                  />
+                  <CardItem
                     src="images/20220806_210639.png"
                     text='Explore the hidden waterfall deep inside the Amazon Jungle'
                     label='Adventure'

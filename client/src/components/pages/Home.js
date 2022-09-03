@@ -1,19 +1,25 @@
-import React,{useRef} from 'react';
+import React,{useRef,useState,useEffect} from 'react';
 import '../../App.css';
 import Section from '../Section';
 import Footer from '../Footer';
 import Introduction from '../Introduction';
 import Artist from '../Artist';
-import { resolvePath } from 'react-router-dom';
 
 function Home({lang}){
-
+    const [backendData,setbackendData] = useState([{}]);
     const ref = useRef(null);
 
     const scrollview = () => {
         ref.current?.scrollIntoView({behavior: 'smooth'});
-        fetch("/api",{method:"GET"}).then(response=>console.log(response.json()))
+        
     };
+    useEffect(() => {
+        fetch("http://localhost:5000/api").then(
+            response=>response.json()
+        ).then((data)=>{
+            setbackendData(data)
+        })
+    }, []);
 
     return(
         <>
@@ -21,6 +27,15 @@ function Home({lang}){
             <div ref={ref}><Introduction/></div>
             <Artist/>
             <Footer lang={lang}/>
+            <div>
+            {(typeof backendData.users ==="undefined") ? (
+                <p>loading</p>
+            ) : (
+                backendData.users.map((user, i) => (
+                    <p key={i}>{user}</p>
+                ))
+            )}
+            </div>
         </>
     )
 }
