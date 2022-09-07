@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import {Button} from './button';
+import {Button} from './Button';
 import './Navbar.css';
 
 function Navbar({setLang,lang}) {
   const [click,setClick] = useState(false);
-  const [button,setButton]=useState(true)
+  const [button,setButton] = useState(true)
 
 
   const handleClick =()=>setClick(!click);
@@ -55,7 +55,7 @@ function Navbar({setLang,lang}) {
                 Translation
               </li>
             </ul>
-            {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+            {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
         </div>
     </nav>
     </>

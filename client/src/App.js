@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Services from './components/pages/Service';
 import Arts from './components/pages/Arts';
-import SignUp from './components/pages/SignUp';
+import SignIn from './components/pages/SignIn';
 import LoadingPage from './components/LoadingPage';
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
           <Route path="/" element={<Home lang={lang}/>}/>
           <Route path='/services' element={<Services lang={lang}/>}/>
           <Route path='/arts' element={<Arts lang={lang}/>}/>
-          <Route path='/sign-up' element={<SignUp lang={lang}/>}/>
+          <Route path='/sign-in' element={<SignIn lang={lang}/>}/>
           
         </Routes>
       </Router>
