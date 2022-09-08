@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import { Button } from './Button';
 import './Section.css';
 import '../App.css'
+import {Link} from 'react-router-dom'
 function Section({lang,event}) {
     const images=[
         "images/img-2.jpg",
@@ -24,20 +25,25 @@ function Section({lang,event}) {
         <h1>{lang? "ADVENTURE AWAITS" : "木頭"}</h1>
         <p>{lang? "ADVENTURE AWAITS" : "木頭"}</p>
         <div className="hero-btns">
-            <Button
-                className='btns'
-                buttonStyle='btn--outline'
-                buttonSize='btn--large'            
-            >
-                GET STARTED
-            </Button>
-            <Button
-                className='btns'
-                buttonStyle='btn--primary'
-                buttonSize='btn--large'            
-            >
-                WATCH TAILER<i className='far fa-play-circle'/>
-            </Button>
+            <Link to="/user">
+                <Button
+                    className='btns'
+                    buttonStyle='btn--outline'
+                    buttonSize='btn--large'            
+                >
+                    GET STARTED
+                </Button>
+            </Link>
+            <Link to="/user">
+                <Button
+                    className='btns'
+                    buttonStyle='btn--primary'
+                    buttonSize='btn--large'            
+                >
+                    WATCH TAILER<i className='far fa-play-circle'/>
+                </Button>
+            </Link>
+            
             
 
         </div>

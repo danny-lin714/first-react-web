@@ -7,6 +7,8 @@ import Services from './components/pages/Service';
 import Arts from './components/pages/Arts';
 import SignIn from './components/pages/SignIn';
 import LoadingPage from './components/LoadingPage';
+import Register from './components/pages/Register';
+import User from './components/pages/User';
 
 function App() {
   const [lang,setLang] = useState(true)
@@ -30,6 +32,8 @@ function App() {
           <Route path='/services' element={<Services lang={lang}/>}/>
           <Route path='/arts' element={<Arts lang={lang}/>}/>
           <Route path='/sign-in' element={<SignIn lang={lang}/>}/>
+          <Route path='/register' element={<Register lang={lang}/>}/>
+          <Route path='/user' element={<User lang={lang}/>}/>
           
         </Routes>
       </Router>

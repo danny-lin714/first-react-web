@@ -10,7 +10,7 @@ function Login({lang,event}) {
         <div className='container'>
             <h1>LOGIN</h1>
             <div className="input-area">
-                <form>
+                <form action='/'>
                     <TextField placeholder='Account'/>
                     <TextField placeholder='Password'/>
                     <div><button></button></div>
