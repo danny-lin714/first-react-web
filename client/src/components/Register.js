@@ -3,39 +3,20 @@ import { TextField } from './TextField';
 import './Login.css';
 import '../App.css'
 
-function Login({lang,event}) {
-
+function Register({lang,event}) {
+    const [inputValue_user, setInputValue_user] = useState('')
     const [inputValue_acc, setInputValue_acc] = useState('')
     const [inputValue_pwd, setInputValue_pwd] = useState('')
 
-
-
-    const add_user=()=>{
-        const body={
-            user_name: {username},
-            user_account: {account},
-            user_password: {password}
-        }
-        fetch("http://localhost:5000/user",{
-            method: "POST",
-            body:JSON.stringify(body)
-        }).then(() => {
-            alert("登入成功!");
-            navigate("/home");
-          })
-          .catch((e) => {
-            if (e.response.error) {
-              alert("帳號或密碼錯誤！");
-            }
-          });
-    }
     return (
         <div className='container'>
-            <img src="images/img-5.jpg" alt=""/>
-            <h1>LOGIN</h1>
+            <img src="images/img-2.jpg" alt=""/>
+            <h1>Register</h1>
             <div className="input-area">
                 <form action='/'>
-
+                    <TextField placeholder='Username'
+                               value={inputValue_user}
+                               onChange={(e) => setInputValue_user(e.target.value)}/>
                     <TextField placeholder='Account'
                                value={inputValue_acc}
                                onChange={(e) => setInputValue_acc(e.target.value)}/>
@@ -43,7 +24,6 @@ function Login({lang,event}) {
                                value={inputValue_pwd}
                                onChange={(e) => setInputValue_pwd(e.target.value)}/>
                     <div><button></button></div>
-
                 </form>
             </div>
 
@@ -51,4 +31,4 @@ function Login({lang,event}) {
     );
 }
 
-export default Login;
+export default Register;

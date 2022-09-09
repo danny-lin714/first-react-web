@@ -20,7 +20,7 @@ export default function User(){
                         Login
                     </Button>
                 </Link>
-                <Link to="/register">
+                <Link to="/sign-up">
                     <Button
                         className='btns'
                         buttonStyle='btn--primary'
