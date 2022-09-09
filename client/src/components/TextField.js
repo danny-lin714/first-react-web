@@ -1,16 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import './TextField.css'
 
-export const TextField = ({className, prefix, suffix, placeholder}) => {
-    const [inputValue, setInputValue] = useState('')
+export const TextField = ({type, className, prefix, suffix, placeholder}) => {
     return(
         <>
             {prefix}
-            <input type="text"
+            <input type={type}
                    className={`ipt ${className}`}
-                   value={inputValue}
-                   placeholder={placeholder}
-                   onChange={(e) => setInputValue(e.target.value)}/>
+                   placeholder={placeholder}/>
             {suffix}
         </>
     );
