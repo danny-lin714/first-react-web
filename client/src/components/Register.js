@@ -4,7 +4,9 @@ import './Login.css';
 import '../App.css'
 
 function Register({lang,event}) {
-    const [inputValue, setInputValue] = useState('')
+    const [inputValue_user, setInputValue_user] = useState('')
+    const [inputValue_acc, setInputValue_acc] = useState('')
+    const [inputValue_pwd, setInputValue_pwd] = useState('')
 
     return (
         <div className='container'>
@@ -13,14 +15,14 @@ function Register({lang,event}) {
             <div className="input-area">
                 <form action='/'>
                     <TextField placeholder='Username'
-                               value={inputValue}
-                               onChange={(e) => setInputValue(e.target.value)}/>
+                               value={inputValue_user}
+                               onChange={(e) => setInputValue_user(e.target.value)}/>
                     <TextField placeholder='Account'
-                               value={inputValue}
-                               onChange={(e) => setInputValue(e.target.value)}/>
+                               value={inputValue_acc}
+                               onChange={(e) => setInputValue_acc(e.target.value)}/>
                     <TextField type='password' placeholder='Password'
-                               value={inputValue}
-                               onChange={(e) => setInputValue(e.target.value)}/>
+                               value={inputValue_pwd}
+                               onChange={(e) => setInputValue_pwd(e.target.value)}/>
                     <div><button></button></div>
                 </form>
             </div>
