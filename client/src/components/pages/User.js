@@ -9,7 +9,7 @@ export default function User(){
         <>
         <div className='hero-container'>
         <img src="images/img-2.jpg" alt='alter'/>
-        <h1>ADVENTURE AWAITS</h1>
+        <h1>User</h1>
             <div className="hero-btns">
                 <Link to="/sign-in">
                     <Button
