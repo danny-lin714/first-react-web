@@ -1,27 +1,36 @@
 const express = require("express")
 const cors = require("cors")
+const bodyParser = require('body-parser')
 const db = require('./config/db');
 
 const app = express()
+const jsonParser = bodyParser.json()
 app.use(cors())
-db.query('select * from user', function(err, rows) {
-    if (err) throw err;
-    console.log('Response: ', rows);
-  });
+
+
+
 app.get("/api",(req,res)=>{
     res.json({"users":["userone","asd"]})
 })
 
-app.post('/user', function (req, res) {
-    var addData = req.body
+app.post("/user",jsonParser,(req, res)=>{
     console.log(req.body)
-
-
-    //  ? 會讀取後面的 addData
-    db.query('INSERT INTO user SET ?', addData, function (error, results, fields) {
+    var user_name = req.body.user_name
+    var user_account = req.body.user_account
+    var user_password = req.body.user_password
+    db.query('INSERT INTO user SET ?', {
+        "user_name" : user_name,
+        "user_account" : user_account,
+        "user_password" : user_password
+    }, function (error, results, fields) {
         if (error) throw error;
         return res.send({ error: false, data: results, message: 'products insert.' });
     });
+
+    
+    /*
+    
+    */
 });
 
 app.listen(5000)
