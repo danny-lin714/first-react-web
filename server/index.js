@@ -18,14 +18,19 @@ app.post("/user",jsonParser,(req, res)=>{
     var user_name = req.body.user_name
     var user_account = req.body.user_account
     var user_password = req.body.user_password
-    db.query('INSERT INTO user SET ?', {
-        "user_name" : user_name,
-        "user_account" : user_account,
-        "user_password" : user_password
-    }, function (error, results, fields) {
-        if (error) throw error;
-        return res.send({ error: false, data: results, message: 'products insert.' });
-    });
+    if (user_name =='' & user_account=='' & user_password==''){
+        res.sendStatus(404);
+    }else{
+        db.query('INSERT INTO user SET ?', {
+            "user_name" : user_name,
+            "user_account" : user_account,
+            "user_password" : user_password
+        }, function (error, results, fields) {
+            if (error) throw error;
+            return res.send({ error: false, data: results, message: 'products insert.' });
+        });
+    }
+    
 
     
     /*

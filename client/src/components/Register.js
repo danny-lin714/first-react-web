@@ -8,18 +8,27 @@ function Register({lang,event}) {
     var [inputValue_acc, setInputValue_acc] = useState('')
     var [inputValue_pwd, setInputValue_pwd] = useState('')
     
-    const add_user=(user,acc,pwd)=>{
+    const add_user=()=>{
         fetch("http://localhost:5000/user",{
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                "user_name":user,
-                "user_account": acc,
-                "user_password": pwd
+                "user_name":inputValue_user,
+                "user_account": inputValue_acc,
+                "user_password": inputValue_pwd
             })
         })
         .then(response => response.json())
         .then(json => console.log(json));
+    }
+    const set_user=(e)=>{
+        setInputValue_user(e.target.value)
+    }
+    const set_acc=(e)=>{
+        setInputValue_acc(e.target.value)
+    }
+    const set_pwd=(e)=>{
+        setInputValue_pwd(e.target.value)
     }
     return (
         <div className='container'>
@@ -28,17 +37,13 @@ function Register({lang,event}) {
             <div className="input-area">
                 <form>
                     <TextField  placeholder='Username'
-                                value={inputValue_user}
-                                onChange={(e) => setInputValue_user(e.target.value)}/>
+                                setValue={set_user}/>
                     <TextField  placeholder='Account'
-                                value={inputValue_acc}
-                                onChange={(e) => {
-                                    setInputValue_acc(e.target.value)
-                                }}/>
-                    <TextField type='password' placeholder='Password'
-                               value={inputValue_pwd}
-                               onChange={(e) => setInputValue_pwd(e.target.value)}/>
-                    <div><button type='submit' onClick={add_user(inputValue_user,inputValue_acc,inputValue_pwd)}></button></div>
+                                setValue={set_acc}/>
+                    <TextField  type='password'
+                                placeholder='Password'
+                                setValue={set_pwd}/>
+                    <div><button onClick={add_user}></button></div>
                 </form>
             </div>
         </div>
