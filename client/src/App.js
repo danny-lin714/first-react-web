@@ -26,14 +26,14 @@ function App() {
     <>
       {loading===false ?(
         <Router>
-        <Navbar setLang={handleClick} lang={lang}/>
+        {/* <Navbar setLang={handleClick} lang={lang}/> */}
         <Routes>
           <Route path="/" element={<Home lang={lang}/>}/>
-          <Route path='/services' element={<Services lang={lang}/>}/>
+          {/* <Route path='/services' element={<Services lang={lang}/>}/> */}
           <Route path='/arts' element={<Arts lang={lang}/>}/>
-          <Route path='/sign-in' element={<SignIn lang={lang}/>}/>
-          <Route path='/sign-up' element={<SignUp lang={lang}/>}/>
-          <Route path='/user' element={<User lang={lang}/>}/>
+          {/* <Route path='/sign-in' element={<SignIn lang={lang}/>}/>
+          <Route path='/sign-up' element={<SignUp lang={lang}/>}/> */}
+          {/* <Route path='/user' element={<User lang={lang}/>}/> */}
           
         </Routes>
       </Router>

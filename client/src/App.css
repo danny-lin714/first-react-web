@@ -17,22 +17,22 @@
   font-size: 3rem;
 }
 
-.services {
+/* .services {
   background-image: url('../public/images/img-2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-}
-.sign-up {
+} */
+/* .sign-up {
   background-image: url('../public/images/img-2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-}
+} */
 
 .products {
   background-image: url('../public/images/img-3.jpg');
@@ -43,11 +43,11 @@
   font-size: 100px;
 }
 
-.sign-in {
+/* .sign-in {
   background-image: url('../public/images/img-5.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-}
+} */

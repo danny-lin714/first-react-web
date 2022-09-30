@@ -19,7 +19,7 @@ function Home({lang}){
             <Section lang={lang} event={scrollview}/>
             <div ref={ref}><Introduction/></div>
             <Artist/>
-            <Footer lang={lang}/>
+            {/* <Footer lang={lang}/> */}
         </>
     )
 }
