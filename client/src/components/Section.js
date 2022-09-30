@@ -5,8 +5,9 @@ import '../App.css'
 import {Link} from 'react-router-dom'
 function Section({lang,event}) {
     const images=[
+        "images/img-1.jpg",
         "images/img-2.jpg",
-        "images/img-3.jpg",
+        "images/img-3.jpg"
     ]
 
     const [count,setCount]=useState(0);
@@ -21,7 +22,7 @@ function Section({lang,event}) {
 
   return (
     <div className='hero-container'>
-        <img src={images[(count%2)]} alt='alter'/>
+        <img src={images[(count%3)]} alt='alter'/>
         <h1>{lang? "ADVENTURE AWAITS" : "木頭"}</h1>
         <p>{lang? "ADVENTURE AWAITS" : "木頭"}</p>
         <div className="hero-btns">

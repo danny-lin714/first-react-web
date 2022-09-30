@@ -2,6 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const bodyParser = require('body-parser')
 const db = require('./config/db');
+const { application } = require("express");
 
 const app = express()
 const jsonParser = bodyParser.json()
@@ -12,7 +13,11 @@ app.use(cors())
 app.get("/api",(req,res)=>{
     res.json({"users":["userone","asd"]})
 })
-
+/*
+app.post("/comment",jsonParser,(req,res)=>{
+    var
+})
+*/
 app.post("/login",jsonParser,(req,res)=>{
     var user_account = req.body.user_account
     var user_password = req.body.user_password

@@ -57,6 +57,8 @@ function Cards() {
                     label='Adventure'
                     path='/services'
                   />
+                  </ul>
+                  <ul className='cards__items'>
                   <CardItem
                     src="images/20220806_210639.png"
                     text='Explore the hidden waterfall deep inside the Amazon Jungle'

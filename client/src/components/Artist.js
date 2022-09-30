@@ -5,7 +5,6 @@ function Artist() {
     <div className='background'>
     <div class="card">
         <div class="circle">
-            <img src="images/images.jpg" class="avatar" alt='ad'/>
         </div>
         <h1 class="info">關於林璿渝</h1>
         <div class="content">
