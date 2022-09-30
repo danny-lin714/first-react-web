@@ -21,6 +21,9 @@ function Login({lang,event}) {
         .then(response => response.json())
         .then(json => console.log(json));
     }
+    const set_user=(e)=>{
+        setInputValue_user(e.target.value)
+    }
     const set_acc=(e)=>{
         setInputValue_acc(e.target.value)
     }
@@ -31,25 +34,23 @@ function Login({lang,event}) {
     */
     
     return (
-        /*
-        <div className='container'>
-            <img src="images/img-5.jpg" alt=""/>
-            <h1>LOGIN</h1>
-            <div className="input-area">
-                <form action='/'>
+        <></>
+        // <div className='container'>
+        //     <img src="images/img-5.jpg" alt=""/>
+        //     <h1>LOGIN</h1>
+        //     <div className="input-area">
+        //         <form action='/'>
 
-                    <TextField placeholder='Account'
-                               setValue={set_acc}/>
-                    <TextField type='password' placeholder='Password'
-                               setValue={set_pwd}/>
-                    <div><button></button></div>
+        //             <TextField placeholder='Account'
+        //                        setValue={set_acc}/>
+        //             <TextField type='password' placeholder='Password'
+        //                        setValue={set_pwd}/>
+        //             <div><button></button></div>
 
-                </form>
-            </div>
+        //         </form>
+        //     </div>
 
-        </div>
-        */
-       <></>
+        // </div>
     );
 }
 
