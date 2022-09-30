@@ -4,7 +4,7 @@ import './Login.css';
 import '../App.css'
 
 function Login({lang,event}) {
-
+    /*
     const [inputValue_acc, setInputValue_acc] = useState('')
     const [inputValue_pwd, setInputValue_pwd] = useState('')
     
@@ -21,9 +21,6 @@ function Login({lang,event}) {
         .then(response => response.json())
         .then(json => console.log(json));
     }
-    const set_user=(e)=>{
-        setInputValue_user(e.target.value)
-    }
     const set_acc=(e)=>{
         setInputValue_acc(e.target.value)
     }
@@ -31,9 +28,10 @@ function Login({lang,event}) {
         setInputValue_pwd(e.target.value)
     }
 
-
+    */
     
     return (
+        /*
         <div className='container'>
             <img src="images/img-5.jpg" alt=""/>
             <h1>LOGIN</h1>
@@ -50,6 +48,8 @@ function Login({lang,event}) {
             </div>
 
         </div>
+        */
+       <></>
     );
 }
 

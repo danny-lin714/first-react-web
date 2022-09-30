@@ -4,6 +4,7 @@ import './Login.css';
 import '../App.css'
 
 function Register({lang,event}) {
+    /*
     var [inputValue_user, setInputValue_user] = useState('')
     var [inputValue_acc, setInputValue_acc] = useState('')
     var [inputValue_pwd, setInputValue_pwd] = useState('')
@@ -30,7 +31,9 @@ function Register({lang,event}) {
     const set_pwd=(e)=>{
         setInputValue_pwd(e.target.value)
     }
+    */
     return (
+        /*
         <div className='container'>
             <img src="images/img-2.jpg" alt=""/>
             <h1>Register</h1>
@@ -47,6 +50,8 @@ function Register({lang,event}) {
                 </form>
             </div>
         </div>
+        */
+       <></>
     );
 }
 
