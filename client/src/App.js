@@ -26,7 +26,7 @@ function App() {
         <Router>
         {/* <Navbar setLang={handleClick} lang={lang}/> */}
         <Routes>
-          <Route path="/" element={<Home lang={lang}/>}/>
+          <Route path="/" element={<Home setLang={handleClick} lang={lang}/>}/>
           {/* <Route path='/services' element={<Services lang={lang}/>}/> */}
           <Route path='/arts' element={<Arts lang={lang}/>}/>
           <Route path='/user' element={<User lang={lang}/>}/>
