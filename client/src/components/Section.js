@@ -3,7 +3,7 @@ import { Button } from './Button';
 import './Section.css';
 import '../App.css'
 import {Link} from 'react-router-dom'
-function Section({lang,event}) {
+function Section({set,lang,event}) {
     const images=[
         "images/img-1.jpg",
         "images/img-2.jpg",
@@ -22,11 +22,12 @@ function Section({lang,event}) {
 
   return (
     <div className='hero-container'>
-        <img src={images[(count%3)]} alt='alter'/>
+        <img className='background' src={images[(count%3)]} alt='alter'/>
         <h1>{lang? "ADVENTURE AWAITS" : "木頭"}</h1>
         <p>{lang? "ADVENTURE AWAITS" : "木頭"}</p>
+        <button  className='translation' src='images/translation_icon.png' onClick={event=>set()} alt="asd"/>
         <div className="hero-btns">
-            <Link to="/user">
+            <Link to="/arts">
                 <Button
                     className='btns'
                     buttonStyle='btn--outline'
@@ -35,6 +36,7 @@ function Section({lang,event}) {
                     GET STARTED
                 </Button>
             </Link>
+{/*             
             <Link to="/user">
                 <Button
                     className='btns'
@@ -44,6 +46,7 @@ function Section({lang,event}) {
                     WATCH TAILER<i className='far fa-play-circle'/>
                 </Button>
             </Link>
+*/}
             
             
 

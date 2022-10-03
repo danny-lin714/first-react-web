@@ -17,6 +17,8 @@
     margin: 0 auto;
   }
   
+
+
   .cards__wrapper {
     position: relative;
     margin: 50px 0 45px;
@@ -86,9 +88,9 @@
     transition: all 0.2s linear;
   }
   
-  .cards__item__img:hover {
+  /* .cards__item__img:hover {
     transform: scale(1.1);
-  }
+  } */
   
   .cards__item__info {
     padding: 20px 30px 30px;
