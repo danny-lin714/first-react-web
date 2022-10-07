@@ -23,9 +23,10 @@ function Section({set,lang,event}) {
   return (
     <div className='hero-container'>
         <img className='background' src={images[(count%3)]} alt='alter'/>
-        <h1>{lang? "ADVENTURE AWAITS" : "木頭"}</h1>
-        <p>{lang? "ADVENTURE AWAITS" : "木頭"}</p>
-        <button  className='translation' src='images/translation_icon.png' onClick={event=>set()} alt="asd"/>
+        <h1>{lang? "WOODER" : "木創藝"}</h1>
+        <p>{lang? "Tongxiao sculptor" : "通霄雕刻家"}</p>
+        <div className='translation'onClick={event=>set()}><p>T</p></div>
+        
         <div className="hero-btns">
             <Link to="/arts">
                 <Button
@@ -33,7 +34,7 @@ function Section({set,lang,event}) {
                     buttonStyle='btn--outline'
                     buttonSize='btn--large'            
                 >
-                    GET STARTED
+                    {lang? "PORTFOLIO" : "作品集"}
                 </Button>
             </Link>
 {/*             
@@ -52,7 +53,7 @@ function Section({set,lang,event}) {
 
         </div>
         <button class="button scroll-indicator" onClick={event}>
-            <span class="scroll-indicator__label">Baixe para ver mais</span> 
+            <span class="scroll-indicator__label">introduction</span> 
             <div class="scroll-indicator__line"></div>
         </button>
       

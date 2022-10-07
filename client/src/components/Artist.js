@@ -1,14 +1,14 @@
 import React from 'react';
 import "./Artist.css"
-function Artist() {
+function Artist({lang}) {
   return (
     <div className='background'>
     <div class="card">
         <div class="circle">
         </div>
-        <h1 class="info">關於林璿渝</h1>
+        <h1 class="info">{lang?"關於我":"About Me"}</h1>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut consequatur delectus distinctio dolore dolores dolorum eaque eius et facilis iusto magnam odit quidem rerum, sed, sit velit vero. Sed!</p>
+            <div class="content-outer"><p>我是林璿瑜，一個來自通霄的雕刻家</p></div>
         </div>
     </div>
     </div>

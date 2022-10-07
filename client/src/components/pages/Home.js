@@ -13,10 +13,9 @@ function Home({setLang,lang}){
         
     };
     return(
-        <>
-            <button  className='translation' src='images/translation_icon.png' onClick={event=>setLang()} alt="asd"/>
+        <>  
             <Section set={setLang} lang={lang} event={scrollview}/>
-            <div ref={ref}><Artist/></div>
+            <div ref={ref}><Artist lang={lang}/></div>
         </>
     )
 }

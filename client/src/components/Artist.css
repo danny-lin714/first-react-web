@@ -21,12 +21,12 @@ li {
 .card {
     position: relative;
     display: flex;
-    height: 700px;
+    height: 30rem;
     margin: 20px;
     border-radius: 20px;
     transition: 0.3s;
     transition-delay: 0.1s;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -61,7 +61,7 @@ li {
 .card:hover .circle::before {
     clip-path: circle(1100px at center);
 }
-
+/* 
 .card .circle .avatar {
     position: absolute;
     left: 125px;
@@ -70,21 +70,25 @@ li {
     transition: 0.3s;
     transition-delay: 0.3s;
     clip-path: circle(100px at center);
-}
-
+} */
+/* 
 .card:hover .circle .avatar {
     transition-delay: 0s;
-}
+} */
 
 .card .info {
     position: absolute;
-    right: 45%;
     margin-top: 20px;
     color: #fff;
     opacity: 1;
     visibility: visible;
     transition-delay: 0.1s;
     font: 50px "cwTeXMing","Apple LiSung Light","LiSong Pro Light","PMingLiU","Times New Roman",serif
+}
+.card .info-outer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .card:hover .info{
     transform: translate(-50%) scale(0);
@@ -112,10 +116,14 @@ li {
     visibility: hidden;
     transition: 0.3s;
 }
-
+.content-outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .card:hover .content {
     position: absolute;
-    left: 450px;
+    left: 25%;
     opacity: 1;
     visibility: visible;
     align-items: flex-start;
