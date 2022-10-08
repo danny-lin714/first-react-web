@@ -83,7 +83,7 @@ li {
     opacity: 1;
     visibility: visible;
     transition-delay: 0.1s;
-    font: 50px "cwTeXMing","Apple LiSung Light","LiSong Pro Light","PMingLiU","Times New Roman",serif
+    font: 3rem;
 }
 .card .info-outer{
     display:flex;
@@ -95,6 +95,7 @@ li {
     opacity: 0;
     visibility: hidden;
     transition-delay: 0.05s;
+    
 }
 
 .card .info::after {

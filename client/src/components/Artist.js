@@ -6,9 +6,9 @@ function Artist({lang}) {
     <div class="card">
         <div class="circle">
         </div>
-        <h1 class="info">{lang?"關於我":"About Me"}</h1>
+        <h1 class="info">{lang?"About Me":"關於我"}</h1>
         <div class="content">
-            <div class="content-outer"><p>我是林璿瑜，一個來自通霄的雕刻家</p></div>
+            <div class="content-outer"><p>我是林璿瑜，一個來自通霄的雕刻家</p><br/><p></p></div>
         </div>
     </div>
     </div>

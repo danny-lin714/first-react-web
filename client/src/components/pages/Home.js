@@ -1,8 +1,6 @@
 import React,{useRef,useState,useEffect} from 'react';
 import '../../App.css';
 import Section from '../Section';
-import Footer from '../Footer';
-import Introduction from '../Introduction';
 import Artist from '../Artist';
 
 function Home({setLang,lang}){

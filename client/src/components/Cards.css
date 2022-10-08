@@ -13,7 +13,7 @@
     flex-flow: column;
     align-items: center;
     max-width: 1120px;
-    width: 90%;
+    width: 40%;
     margin: 0 auto;
   }
   
@@ -45,6 +45,8 @@
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
+    align-items: center;
+    justify-content: center;
   }
   
   .cards__item__pic-wrap {
@@ -58,7 +60,20 @@
     animation-name: fade-img;
     animation-duration: 2s;
   }
-  
+  .cards__item :hover {
+    filter: brightness(0.7);
+    transition:ease;
+  }
+  .card__item__content {
+      position: absolute;
+      transform:translate(0,-3rem);
+      font-size: 1.2rem;
+      color: #fff;
+      opacity: 0%;
+  }
+  .cards__item :hover .card__item__content{
+    opacity: 1;
+  }
   .cards__item__pic-wrap::after {
     content: attr(data-category);
     position: absolute;
@@ -101,7 +116,6 @@
     font-size: 18px;
     line-height: 24px;
   }
-  
   @media only screen and (min-width: 1200px) {
     .content__blog__container {
       width: 84%;

@@ -13,8 +13,10 @@ function Cards() {
                       src="images/20220806_154711.png"
                       text='Explore the hidden waterfall deep inside the Amazon Jungle'
                       label='Adventure'
-                      path='/services'
+                      path='/art/1'
                     />
+                  </ul>
+                  <ul className='cards__items'>
                     <CardItem
                       src="images/20220806_155108.png"
                       text='Explore the hidden waterfall deep inside the Amazon Jungle'
@@ -22,13 +24,15 @@ function Cards() {
                       path='/services'
                     />
                 </ul>
-                <ul className='cards__item'>
+                <ul className='cards__items'>
                     <CardItem
                         src="images/20220806_160001.png"
                         text='Explore the hidden waterfall deep inside the Amazon Jungle'
                         label='Adventure'
                         path='/services'
                       />
+                </ul>
+                <ul className='cards__items'>
                       <CardItem
                         src="images/20220806_160711.png"
                         text='Explore the hidden waterfall deep inside the Amazon Jungle'
@@ -36,7 +40,7 @@ function Cards() {
                         path='/services'
                       />
                 </ul>
-                <ul className='cards__item'>
+                <ul className='cards__items'>
                       <CardItem
                         src="images/20220806_210639.png"
                         text='Explore the hidden waterfall deep inside the Amazon Jungle'
